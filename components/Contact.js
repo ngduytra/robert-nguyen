@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import userData from "@constants/data";
 
 export default function Contact() {
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <section>
       <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800 antialiased">
@@ -17,7 +21,25 @@ export default function Contact() {
                 Get in touch, let's talk.
               </h1>
               <p className="font-light text-base text-gray-200 mt-2">
-                Fill in the details and I'll get back to you as soon as I can.
+                - Ping me directly on{" "}
+                <a
+                  href="https://t.me/NguyenDuyTra"
+                  className="text-gray-500 text-2xl"
+                >
+                  Telegram
+                </a>
+              </p>
+              <p className="font-light text-base text-gray-200 mt-2">
+                - Shoot a message through{" "}
+                <a
+                  href="https://join.skype.com/invite/VkjaXDtjzimJ"
+                  className="text-gray-500 text-2xl"
+                >
+                  Skype
+                </a>
+              </p>
+              <p className="font-light text-base text-gray-200 mt-2">
+                - Fill in the details and I'll get back to you as soon as I can.
               </p>
             </header>
             <div className="icons-container inline-flex flex-col my-20">
@@ -147,6 +169,9 @@ export default function Contact() {
               Your Name
             </label>
             <input
+              onChange={(e) => {
+                setFullname(e.target.value);
+              }}
               type="text"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="name"
@@ -155,6 +180,9 @@ export default function Contact() {
               Email
             </label>
             <input
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
               type="text"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="email"
@@ -166,6 +194,9 @@ export default function Contact() {
               Message
             </label>
             <textarea
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
               rows="4"
               type="text"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
