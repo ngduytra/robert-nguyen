@@ -11,7 +11,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
     title:
       "Robert Nguyen - Blockchain Developer, Solidity Developer, Full-stack Developer",
     description: `I am a blockchain addict. I have more than 3 years of experience with Solidity and NodeJS, 2 years of experience with ReactJS, and more than 1 years of experience with Anchor + Rust on Solana`,
-    image: "/avatar.png",
+    image: "/avatar.jpg",
     type: "website",
     ...customMeta,
   };
